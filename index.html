@@ -3,8 +3,215 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AS202909 - KUEBLER</title>
+    <title>AS202909 KUEBLER - Research Lab | Sovereign European Network Research</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', -apple-system, sans-serif; background-color: #f8f9fa; color: #333; }
+        .hero-section {
+            background: linear-gradient(rgba(33, 37, 41, 0.85), rgba(33, 37, 41, 0.85)), url('hero-bg.png');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 0;
+            border-bottom: 4px solid #0d6efd;
+        }
+        .tech-card { border: none; border-radius: 10px; transition: transform 0.2s; }
+        .tech-card:hover { transform: translateY(-5px); }
+        .badge-asn { background-color: #0d6efd; font-size: 1.2rem; }
+        pre { background: #e9ecef; padding: 15px; border-radius: 5px; font-size: 0.9rem; }
+        footer { background: #212529; color: #adb5bd; padding: 40px 0; margin-top: 60px; }
+        .nav-link { color: rgba(255,255,255,0.8); }
+        .nav-link:hover { color: white; }
+    </style>
 </head>
 <body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">AS202909 KUEBLER - Research Lab</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#research">Research</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#peering">Peering</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#sponsoring">Sponsoring</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-section text-center">
+        <div class="container">
+            <span class="badge badge-asn mb-3">Autonomous System 202909</span>
+            <h1 class="display-4 fw-bold">Independent Network Research Lab</h1>
+            <p class="lead text-white-50">Exploring Anycast Architectures & Sovereign European Networking</p>
+        </div>
+    </header>
+
+    <main class="container my-5">
+        
+        <section id="about" class="mb-5">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h2 class="fw-bold mb-4">Mission</h2>
+                    <p>AS202909 is an <strong>independent, non-commercial research initiative</strong> dedicated to the study of internet routing protocols and large-scale infrastructure resilience. The project serves as a technical testing ground for BGP configurations, Anycast distribution, and advanced network security models.</p>
+                    <p>In an increasingly centralized internet environment, our lab investigates decentralized infrastructure models that prioritize data sovereignty and routing transparency within the European jurisdiction.</p>
+                </div>
+                <div class="col-lg-4 text-center">
+                    <div class="p-4 bg-white shadow-sm rounded border">
+                        <h4 class="fw-bold">Lab Status</h4>
+                        <p class="text-info fw-bold mb-3">● Bootstrapping Phase</p>
+                        <!--<p class="text-warning fw-bold">● Optimization Phase</p>
+                        <p class="text-success fw-bold">● Active Research Phase</p>
+                        <p class="text-info fw-bold">● Calibration Phase</p>-->
+                        <ul class="text-start small text-muted" style="list-style-type: none; padding-left: 0;">
+                            <li><strong>Bootstrapping:</strong> Dec 2025 - Mid 2026</li>
+                            <li><strong>Optimization:</strong> Mid 2026 - Dec 2026</li>
+                            <li><strong>Research:</strong> Quarterly (Months 2 & 3)</li>
+                            <li><strong>Calibration:</strong> Quarterly (Month 1)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="my-5">
+
+        <section id="research" class="mb-5">
+            <h2 class="fw-bold text-center mb-5">Current Research Areas</h2>
+            <div class="row g-4">
+                <div class="col-md-4 text-center">
+                    <div class="card h-100 tech-card shadow-sm p-4 border">
+                        <img src="images/icon-anycast.png" alt="Anycast Icon" class="img-fluid mb-3 mx-auto" style="max-height: 120px;">
+                        <h5 class="fw-bold">Anycast Optimization</h5>
+                        <p class="small mb-0">Analysis of latency-based routing to geographically distributed nodes using advanced BGP community steering.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center">
+                    <div class="card h-100 tech-card shadow-sm p-4 border">
+                        <img src="images/icon-resilience.png" alt="Resilience Icon" class="img-fluid mb-3 mx-auto" style="max-height: 120px;">
+                        <h5 class="fw-bold">Traffic Resilience</h5>
+                        <p class="small mb-0">Evaluating infrastructure hardening and packet-flow behavior through the implementation of open-source toolchains like XDP and eBPF.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center">
+                    <div class="card h-100 tech-card shadow-sm p-4 border">
+                        <img src="images/icon-sovereignty.png" alt="Sovereignty Icon" class="img-fluid mb-3 mx-auto" style="max-height: 120px;">
+                        <h5 class="fw-bold">Data Sovereignty</h5>
+                        <p class="small mb-0">Measuring path diversity to ensure critical data streams remain within defined legal and geographic European boundaries.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="peering" class="bg-light p-5 rounded shadow-sm border">
+            <h2 class="fw-bold mb-4">Peering Policy & Technical Info</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <p>AS202909 maintains an <strong>Open Peering Policy</strong>. We seek to interconnect with other research networks, community-driven ISPs, and academic institutions to foster a more robust internet ecosystem.</p>
+                    <ul class="list-unstyled">
+                        <li><strong>ASN:</strong> AS202909</li>
+                        <li><strong>PeeringDB:</strong> <a href="https://www.peeringdb.com/asn/202909" target="_blank">View Profile</a></li>
+                        <li><strong>Policy:</strong> Open (Unfiltered research traffic)</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <pre class="border">
+# Routing Information
+Prefixes IPv6: 2001:678:1180::/48 (Infrastructure)
+               2a0a:79c0:1200::/40 (Research)
+Prefixes IPv4: None (Currently IPv6-only)
+Communities: Engineering specs under development
+                    </pre>
+                </div>
+            </div>
+        </section>
+
+        <section id="sponsoring" class="my-5 py-5">
+            <div class="row">
+                <div class="col-lg-10 offset-lg-1 text-center">
+                    <h2 class="fw-bold mb-4">Partner with the Lab</h2>
+                    <p class="lead">To scale our sovereign European infrastructure, the AS202909 Research Lab seeks strategic partnerships with network providers and data center operators.</p>
+                    <p>We welcome support in the form of:</p>
+                    <div class="d-flex flex-wrap justify-content-center gap-3 my-4">
+                        <span class="badge bg-primary p-2 px-3">IP-Transit (Full Table/Default)</span>
+                        <span class="badge bg-primary p-2 px-3">Colocation Space (1-2U)</span>
+                        <span class="badge bg-primary p-2 px-3">BGP-enabled VPS / Compute</span>
+                        <span class="badge bg-primary p-2 px-3">Cross-Connect Sponsoring</span>
+                    </div>
+                    <div class="row mt-5 text-start">
+                        <div class="col-md-6">
+                            <h4 class="fw-bold">Collaborative Research</h4>
+                            <p>Strategic partners have the unique opportunity to influence our research roadmap. If your organization faces specific technical challenges in the realm of BGP routing, Anycast scaling, or edge security, you can submit **Research Requests**.</p>
+                        </div>
+                        <div class="col-md-6">
+                            <h4 class="fw-bold">Your Benefits</h4>
+                            <ul class="small">
+                                <li><strong>Custom Insights:</strong> We analyze specific edge cases or protocol behaviors relevant to your infrastructure.</li>
+                                <li><strong>Performance Data:</strong> Gain access to detailed benchmarks and latency reports from our distributed European nodes.</li>
+                                <li><strong>Innovation Feedback:</strong> Use AS202909 as a neutral sandbox to test experimental network configurations.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <p class="mt-4">
+                        Interested in supporting the lab? Please reach out to us directly via email.
+                    </p>
+                    <a href="mailto:peering@k-it.org" class="btn btn-primary btn-lg">Inquire via Email</a>
+                </div>
+            </div>
+        </section>
+
+        <hr class="my-5">
+
+        <section id="sponsors" class="mb-5 py-5 text-center">
+            <h2 class="fw-bold mb-5">Supported by</h2>
+            <div class="row justify-content-center align-items-center g-5">
+                <!--<div class="col-6 col-md-3">
+                    <div class="p-3 border rounded shadow-sm bg-white h-100">
+                        <h5 class="fw-bold mb-1">Inter.link</h5>
+                        <p class="small text-primary mb-0">Connectivity Partner</p>
+                    </div>
+                </div>-->
+                <div class="col-6 col-md-3">
+                    <div class="p-3 border rounded border-dashed text-muted h-100" style="border-style: dashed !important;">
+                        <h5 class="mb-1">Join our Lab</h5>
+                        <p class="small mb-0">R&D Support</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer id="contact">
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-md-4">
+                    <h6>NOC</h6>
+                    <p class="small">noc@k-it.org</p>
+                </div>
+                <div class="col-md-4">
+                    <h6>Peering</h6>
+                    <p class="small">peering@k-it.org</p>
+                </div>
+                <div class="col-md-4">
+                    <h6>Abuse</h6>
+                    <p class="small">abuse@k-it.org</p>
+                </div>
+            </div>
+            <hr class="bg-secondary my-4">
+            <p class="small mb-0 text-white-50">© 2026 AS202909 KUEBLER - Research Lab. Operating as a Natural Person for non-commercial educational purposes.</p>
+            <p class="small mt-2">
+                <a href="imprint.html" class="text-white-50">Imprint</a> | 
+                <a href="privacy.html" class="text-white-50">Privacy Policy</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
